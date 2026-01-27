@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday 🎉</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #ff6ec4, #7873f5);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.15);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(0,0,0,0.3);
+            animation: zoomIn 1.5s ease;
+        }
+
+        h1 {
+            font-size: 3em;
+        }
+
+        h2 {
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 25px;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            background: #ffeb3b;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .balloon {
+            position: absolute;
+            bottom: -100px;
+            width: 60px;
+            height: 80px;
+            border-radius: 50%;
+            animation: float 6s infinite ease-in;
+        }
+
+        @keyframes float {
+            0% { bottom: -100px; }
+            100% { bottom: 110%; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>🎉 Happy Birthday 🎉</h1>
+    <h2>My Best Friend 💖</h2>
+    <p>
+        February 4th is special because YOU were born 😎<br>
+        Wishing you success, happiness and endless smiles ✨
+    </p>
+    <button onclick="showMessage()">Click for Surprise 🎁</button>
+</div>
+
+<script>
+    function showMessage() {
+        alert("🎂 Happy Birthday Bro! Stay awesome always 💪😄");
+    }
+
+    for (let i = 0; i < 10; i++) {
+        let b = document.createElement("div");
+        b.className = "balloon";
+        b.style.left = Math.random() * 100 + "vw";
+        b.style.background = `hsl(${Math.random()*360},100%,60%)`;
+        b.style.animationDuration = (4 + Math.random() * 4) + "s";
+        document.body.appendChild(b);
+    }
+</script>
+
+</body>
+</html>
