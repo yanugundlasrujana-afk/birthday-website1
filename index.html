@@ -1,109 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Happy Birthday 🎉</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(120deg, #ff6ec4, #7873f5);
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            overflow: hidden;
-        }
+<meta charset="UTF-8">
+<title>Happy Birthday 🎉</title>
 
-        .card {
-            background: rgba(255,255,255,0.15);
-            padding: 40px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 0 30px rgba(0,0,0,0.3);
-            animation: zoomIn 1.5s ease;
-        }
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(120deg, #ff6ec4, #7873f5);
+    font-family: Arial, sans-serif;
+    color: white;
+}
 
-        h1 {
-            font-size: 3em;
-        }
+.card {
+    background: rgba(255,255,255,0.2);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(0,0,0,0.3);
+}
 
-        h2 {
-            margin-top: 10px;
-        }
-
-        button {
-            margin-top: 25px;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 25px;
-            background: #ffeb3b;
-            font-size: 16px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        button:hover {
-            transform: scale(1.1);
-        }
-
-        @keyframes zoomIn {
-            from {
-                transform: scale(0.5);
-                opacity: 0;
-            }
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        .balloon {
-            position: absolute;
-            bottom: -100px;
-            width: 60px;
-            height: 80px;
-            border-radius: 50%;
-            animation: float 6s infinite ease-in;
-        }
-
-        @keyframes float {
-            0% { bottom: -100px; }
-            100% { bottom: 110%; }
-        }
-    </style>
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    background: #ffeb3b;
+    cursor: pointer;
+}
+</style>
 </head>
+
 <body>
 
 <div class="card">
-    <h1>🎉 Happy Birthday 🎉</h1>
-    <h2>My Best Friend Jannath 💖</h2>
+    <h1>🎉 Happy Birthday Jannath 🎉</h1>
+    <h2>My Best Friend 💖</h2>
     <p>
-        February 4th is special because YOU were born 😎<br>
-        Wishing you success, happiness and endless smiles ✨
-        May your birthday be as beautiful as you are
+        February 4th is special because YOU were born 😎<br><br>
+        Wishing you happiness, success, and endless smiles ✨
     </p>
+
+    <!-- BUTTON -->
     <button onclick="showMessage()">Click for Surprise 🎁</button>
 </div>
 
 <script>
-    function showMessage() {
-        alert("🎂 I am so lucky to have you in my life, Having you as a friend is one of the greatest blessing in my life
-              Your one the best part of my life💪😄");
-    }
-
-    for (let i = 0; i < 10; i++) {
-        let b = document.createElement("div");
-        b.className = "balloon";
-        b.style.left = Math.random() * 100 + "vw";
-        b.style.background = `hsl(${Math.random()*360},100%,60%)`;
-        b.style.animationDuration = (4 + Math.random() * 4) + "s";
-        document.body.appendChild(b);
-    }
+function showMessage() {
+    alert(
+        "🎂 I am so lucky to have you in my life.\n\n" +
+        "Having you as a friend is one of the greatest blessings in my life.\n\n" +
+        "You are one of the best parts of my life 💖"
+    );
+}
 </script>
 
 </body>
-
 </html>
-
